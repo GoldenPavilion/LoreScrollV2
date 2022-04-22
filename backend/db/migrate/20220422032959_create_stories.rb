@@ -5,6 +5,9 @@ class CreateStories < ActiveRecord::Migration[6.1]
       t.string :genre
       t.string :type
       t.string :summary
+      t.integer :user_id
+      t.integer :setting_id
+      
 
       t.timestamps
     end
