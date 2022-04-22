@@ -11,6 +11,7 @@ class CreateCharacters < ActiveRecord::Migration[6.1]
       t.string :personality
       t.string :history
       t.string :motivation
+      t.integer :setting_id
 
       t.timestamps
     end
