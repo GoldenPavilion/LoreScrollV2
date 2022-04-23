@@ -2,12 +2,11 @@ class Api::UsersController < ApplicationController
 
     def index
         @users = User.all
-        ## need to render json
+        render json: @users
     end
 
     def show
-        @user = User.find(params[:id])
-        render json: User.new(@user)
+        render json: @user
     end
 
     def create
@@ -15,7 +14,7 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             session[:user_id] = @user.id
-            render json: User.new(@user)
+            render json: @user, status: :created, location: @user
         else
             render json: {
                 error: "Username and E-mail must be unique."
