@@ -8,4 +8,15 @@ class Api::StoriesController < ApplicationController
         @story = Story.find(params[:id])
         render json: @story
     end
+
+    def create
+        @story = Story.new(story_params)
+
+        if @story.save
+            render json: @story, status: :created, location: @story
+        else
+            render json: @story.errors, status: :unprocessable_entity
+        end
+    end
+
 end
