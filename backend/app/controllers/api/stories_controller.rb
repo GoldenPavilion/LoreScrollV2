@@ -19,4 +19,10 @@ class Api::StoriesController < ApplicationController
         end
     end
 
+    private
+
+    def story_params
+        params.require(:story).permit(:title, :genre, :type, :summary)
+    end
+
 end
