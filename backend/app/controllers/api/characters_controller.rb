@@ -3,4 +3,9 @@ class Api::CharactersController < ApplicationController
         @characters = Character.all
         render json: @characters
     end
+
+    def show
+        @character = Character.find(params[:id])
+        render json: @character
+    end
 end
