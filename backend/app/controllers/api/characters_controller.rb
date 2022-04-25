@@ -18,4 +18,10 @@ class Api::CharactersController < ApplicationController
             render json: @character.errors, status: :unprocessable_entity
         end
     end
+
+    private
+
+    def character_params
+        params.require(:character).permit(:name, :role, :age, :gender, :species, :job, :physical, :personality, :history, :motivation)
+    end
 end
