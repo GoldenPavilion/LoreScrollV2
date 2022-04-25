@@ -3,4 +3,9 @@ class Api::SettingsController < ApplicationController
         @settings = Setting.all
         render json: @settings
     end
+
+    def show
+        @setting = Setting.find(params[:id])
+        render json: @setting
+    end
 end
