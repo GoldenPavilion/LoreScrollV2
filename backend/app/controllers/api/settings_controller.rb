@@ -18,4 +18,11 @@ class Api::SettingsController < ApplicationController
             render json: @setting.errors, status: :unprocessable_entity
         end
     end
+
+    private
+
+    def setting_params
+        params.require(:setting).permit(:name, :summary)
+    end
+
 end
