@@ -8,4 +8,14 @@ class Api::SettingsController < ApplicationController
         @setting = Setting.find(params[:id])
         render json: @setting
     end
+
+    def create
+        @setting = Setting.new(setting_params)
+
+        if @setting.save
+            render json: @setting, status: :created, location: @setting
+        else
+            render json: @setting.errors, status: :unprocessable_entity
+        end
+    end
 end
