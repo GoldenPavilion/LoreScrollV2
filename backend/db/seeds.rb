@@ -16,8 +16,8 @@ Story.create(
     genre: "Science Fantasy",
     story_type: "Screenplay",
     summary: "The Imperial Forces -- under orders from cruel Darth Vader (David Prowse) -- hold Princess Leia (Carrie Fisher) hostage, in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker (Mark Hamill) and Han Solo (Harrison Ford), captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 (Kenny Baker) and C-3PO (Anthony Daniels) to rescue the beautiful princess, help the Rebel Alliance, and restore freedom and justice to the Galaxy.",
-    user_id: 0,
-    setting_id: 0
+    user_id: 1,
+    setting_id: 1
 )
 
 Story.create(
@@ -25,8 +25,8 @@ Story.create(
     genre: "Fantasy",
     story_type: "Roleplaying Game",
     summary: "Eberron is a campaign setting for Dungeons and Dragons. Eberron is set in a period of healing after devastating 102 year war that ravaged the continent of Khorvaire and split the mighty kingdom into 12 quarreling nations.",
-    user_id: 1,
-    setting_id: 1
+    user_id: 2,
+    setting_id: 2
 )
 
 Setting.create(
