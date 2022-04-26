@@ -22,7 +22,7 @@ class Api::StoriesController < ApplicationController
     private
 
     def story_params
-        params.require(:story).permit(:title, :genre, :type, :summary)
+        params.require(:story).permit(:title, :genre, :story_type, :summary)
     end
 
 end
