@@ -11,6 +11,16 @@ User.create(username: "Donatello", password: "password", email: "donatello@tmnt.
 User.create(username: "Michaelangelo", password: "password", email: "mikey@tmnt.com", penname: "Mikey Turtle");
 User.create(username: "Raphael", password: "password", email: "raphael@tmnt.com", penname: "Raffy Turtle");
 
+Setting.create(
+    name: "A Galaxy Far, Far Away...",
+    summary: "A far off galaxy held together by a mystical power called 'The Force'."
+)
+
+Setting.create(
+    name: "Rising from the Last War",
+    summary: "A world where magic power technology."
+)
+
 Story.create(
     title: "Star Wars",
     genre: "Science Fantasy",
@@ -27,16 +37,6 @@ Story.create(
     summary: "Eberron is a campaign setting for Dungeons and Dragons. Eberron is set in a period of healing after devastating 102 year war that ravaged the continent of Khorvaire and split the mighty kingdom into 12 quarreling nations.",
     user_id: 2,
     setting_id: 2
-)
-
-Setting.create(
-    name: "A Galaxy Far, Far Away...",
-    summary: "A far off galaxy held together by a mystical power called 'The Force'."
-)
-
-Setting.create(
-    name: "Rising from the Last War",
-    summary: "A world where magic power technology."
 )
 
 Character.create(
