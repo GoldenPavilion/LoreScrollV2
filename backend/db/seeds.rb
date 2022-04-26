@@ -28,3 +28,13 @@ Story.create(
     user_id: 1,
     setting_id: 1
 )
+
+Setting.create(
+    name: "A Galaxy Far, Far Away...",
+    summary: "A far off galaxy held together by a mystical power called 'The Force'."
+)
+
+Setting.create(
+    name: "Rising from the Last War",
+    summary: "A world where magic power technology."
+)
