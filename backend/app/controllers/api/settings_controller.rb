@@ -1,19 +1,19 @@
 class Api::SettingsController < ApplicationController
     def index
         @settings = Setting.all
-        render json: @settings
+        render json: SettingSerializer.new(@settings)
     end
 
     def show
         @setting = Setting.find(params[:id])
-        render json: @setting
+        render json: SettingSerializer.new(@setting)
     end
 
     def create
         @setting = Setting.new(setting_params)
 
         if @setting.save
-            render json: @setting, status: :created, location: @setting
+            render json: SettingSerializer.new(@setting), status: :created, location: @setting
         else
             render json: @setting.errors, status: :unprocessable_entity
         end
