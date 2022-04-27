@@ -1,19 +1,19 @@
 class Api::StoriesController < ApplicationController
     def index
         @stories = Story.all
-        render json: @stories
+        render json: StorySerializer.new(@stories)
     end
 
     def show
         @story = Story.find(params[:id])
-        render json: @story
+        render json: StorySerializer.new(@story)
     end
 
     def create
         @story = Story.new(story_params)
 
         if @story.save
-            render json: @story, status: :created, location: @story
+            render json: StorySerializer.new(@story), status: :created, location: @story
         else
             render json: @story.errors, status: :unprocessable_entity
         end
