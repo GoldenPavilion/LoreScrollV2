@@ -13,12 +13,14 @@ User.create(username: "Raphael", password: "password", email: "raphael@tmnt.com"
 
 Setting.create(
     name: "A Galaxy Far, Far Away...",
-    summary: "A far off galaxy held together by a mystical power called 'The Force'."
+    summary: "A far off galaxy held together by a mystical power called 'The Force'.",
+    user_id: 1
 )
 
 Setting.create(
     name: "Rising from the Last War",
-    summary: "A world where magic power technology."
+    summary: "A world where magic power technology.",
+    user_id: 2
 )
 
 Story.create(
