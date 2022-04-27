@@ -1,4 +1,4 @@
 class SettingSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :summary, :stories
+  attributes :name, :summary, :stories, :characters
 end
