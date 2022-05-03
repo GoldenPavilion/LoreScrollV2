@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 
 import currentUserReducer from './reducers/main/currentUserReducer'
 
-const reducers = combineReducer({
+const reducers = combineReducers({
     currentUserReducer
 })
 
