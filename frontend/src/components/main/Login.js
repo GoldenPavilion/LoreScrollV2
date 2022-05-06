@@ -5,7 +5,14 @@ import { login } from '../../actions/main/currentUser.js';
 
 const Login = ({ loginForm, updateLoginForm, login }) => {
     
-
+    const handleOnChange = event => {
+        const { name, value } = event.target
+        const updatedData = {
+            ...loginForm,
+            [name]: value
+        }
+        updateLoginForm(updatedData)
+    }
 
     return(
         <div className="login">
