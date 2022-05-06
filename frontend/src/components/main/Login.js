@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { updateLoginForm } from '../../actions/main/login.js';
 import { login } from '../../actions/main/currentUser.js';
 
-const Login = () => {
+const Login = ({ loginForm, updateLoginForm, login }) => {
+    debugger
     return(
         <div className="login">
             <form className="login-form">
