@@ -24,6 +24,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
                         type="text"
                         name="username"
                         value={loginForm.username}
+                        onChange={handleOnChange}
                     />
                 </div>
                 <div className="form-group">
@@ -33,6 +34,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
                         type="password"
                         name="password"
                         value={loginForm.password}
+                        onChange={handleOnChange}
                     />
                 </div>
                 <button
