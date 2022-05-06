@@ -4,6 +4,9 @@ import { updateLoginForm } from '../../actions/main/login.js';
 import { login } from '../../actions/main/currentUser.js';
 
 const Login = ({ loginForm, updateLoginForm, login }) => {
+    
+
+
     return(
         <div className="login">
             <form className="login-form">
@@ -13,6 +16,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
                         className="form-control"
                         type="text"
                         name="username"
+                        value={loginForm.username}
                     />
                 </div>
                 <div className="form-group">
@@ -21,6 +25,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
                         className="form-control"
                         type="password"
                         name="password"
+                        value={loginForm.password}
                     />
                 </div>
                 <button
