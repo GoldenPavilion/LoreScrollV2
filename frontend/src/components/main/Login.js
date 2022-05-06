@@ -26,9 +26,14 @@ const Login = () => {
                     value="Login"
                 />
             </form>
-
         </div>
     )
 }
 
-export default Login;
+const mapStateToProps = state => {
+    return {
+        login: state.loginReducer
+    }
+}
+
+export default connect(mapStateToProps)(Login);
