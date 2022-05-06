@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import updateLoginForm from '../actions/main/login.js';
-import login from '../actions/main/currentUser.js';
+import { updateLoginForm } from '../../actions/main/login.js';
+import { login } from '../../actions/main/currentUser.js';
 
 const Login = () => {
     return(
@@ -26,7 +26,7 @@ const Login = () => {
                 <button
                     type="submit"
                     value="Login"
-                />
+                >Login</button>
             </form>
         </div>
     )
