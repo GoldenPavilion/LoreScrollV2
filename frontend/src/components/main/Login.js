@@ -11,7 +11,11 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
             ...loginForm,
             [name]: value
         }
-        updateLoginForm(updatedData)
+        updateLoginForm(updatedData);
+    }
+
+    const handleOnSubmit = event => {
+        login(loginForm);
     }
 
     return(
@@ -40,6 +44,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
                 <button
                     type="submit"
                     value="Login"
+                    onSubmit={handleOnSubmit}
                 >Login</button>
             </form>
         </div>
