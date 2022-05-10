@@ -14,4 +14,13 @@ class Api::SessionsController < ApplicationController
 
   def destroy
   end
+
+  def get_current_user
+    if logged_in?
+      render json: UserSerializer.new(current_user)
+    else
+      render json: {
+        error: "No Login"
+      }
+  end
 end
