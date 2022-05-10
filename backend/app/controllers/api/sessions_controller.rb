@@ -3,7 +3,7 @@ class Api::SessionsController < ApplicationController
     @user = User.find_by(username: params[:session][:username])
     if @user && @user.authenticate(params[:session][:password])
       sesson[:user_id] = @user.id
-      render json: @user
+      render json: UserSerializer.new(@user)
     else
       flash[:notify] = "Something went wrong. Try again!"
       render json: {
