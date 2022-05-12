@@ -11,6 +11,11 @@ import { getCurrentUser } from '../actions/currentUser';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'; 
 
 function App() {
+
+  componentDidMount() {
+    this.props.getCurrentUser()
+  }
+
   return (
     <Router>
       <div className="App">
