@@ -3,6 +3,11 @@ import './App.css';
 // COMPONENTS
 import Main from './components/main/Main.js';
 import Login from './components/main/Login.js';
+
+// ACTIONS
+import { connect } from 'react-redux';
+import { getCurrentUser } from '../actions/currentUser';
+
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'; 
 
 function App() {
