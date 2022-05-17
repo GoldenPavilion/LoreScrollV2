@@ -13,6 +13,9 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
+    if current_user
+      session.clear
+    end
   end
 
   def get_current_user
