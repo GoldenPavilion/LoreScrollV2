@@ -22,8 +22,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Main />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/logout" element={<Logout />} />
+          { this.props.currentUser ? <Route exact path="/login" element={<Login />} /> : <Route exact path="/logout" element={<Logout />} /> }
         </Routes>
       </div>
     </Router>
