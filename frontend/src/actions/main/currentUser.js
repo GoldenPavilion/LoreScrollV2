@@ -26,6 +26,7 @@ export const login = creds => {
 
 export const logout = () => {
     return dispatch => {
+        dispatch(clearCurrentUser())
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
             method: "DELETE"
