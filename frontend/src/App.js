@@ -30,4 +30,10 @@ function App() {
   );
 }
 
-export default connect(null, { getCurrentUser })(App);
+const mapStateToProps = state => {
+  return {
+    currentUser: state.currentUserReducer
+  }
+}
+
+export default connect(mapStateToProps, { getCurrentUser })(App);
